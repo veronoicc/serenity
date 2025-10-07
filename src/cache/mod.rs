@@ -179,7 +179,7 @@ pub struct Cache {
     // ---
     /// A map of guilds with full data available. This includes data like [`Role`]s and [`Emoji`]s
     /// that are not available through the REST API.
-    guilds: MaybeMap<GuildId, Guild>,
+    pub(crate) guilds: MaybeMap<GuildId, Guild>,
     /// A list of guilds which are "unavailable".
     ///
     /// Additionally, guilds are always unavailable for bot users when a Ready is received. Guilds
